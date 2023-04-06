@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Iteration02cs3300New</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Collection App (Title WIP)" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Catalogue your media collection!" %>">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +13,9 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <main role="main">
+      <%= content_for?(:content) ? yield(:content) : yield %>
+    </main>
   </body>
 </html>
