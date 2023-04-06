@@ -17,6 +17,16 @@
   </div>
 
   <div class="field">
+    <%= form.label :condition %>
+    <%= form.select :condition, [['Sealed','new'],['Complete in Box','cib'],['Loose with Manual','loose+'],['Loose','loose']] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rating %>
+    <%= form.select :rating, [['5','five'],['4','four'],['3','three'],['2','two'],['1','one']] %>
+  </div>
+
+  <div class="field">
     <%= form.label :notes %>
     <%= form.text_area :notes %>
   </div>
